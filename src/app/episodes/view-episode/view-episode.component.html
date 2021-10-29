@@ -1,0 +1,40 @@
+<!-- Resources -->
+<a [routerLink]="['..']" class="btn btn-primary"> Back</a>
+<h2>Description of Episode: <strong>{{episode.name}}</strong></h2>
+
+<h5>Code Episode: <span><b> {{episode.code}} </b></span></h5>
+<h5>Air Date: <span><b> {{episode.airDate}} </b></span></h5>
+
+<div class="row">
+    <div class="col-md-12 col-lg-4" *ngFor="let character of characters">
+        <!-- Card -->
+        <div class="card">
+            <img class="card-img-top" src="{{character.image}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"><b>{{character.name}}</b></h5>
+                <div class="row card-text">
+                    <div class="col-sm">
+                        <span>Status: <b>{{character.status}}</b></span>
+                    </div>
+                    <div class="col-sm">
+                        <span>Gender: <b>{{character.gender}}</b></span>
+                    </div>
+                    <div class="col-sm">
+                        <span>Specie: <b>{{character.species}}</b></span>
+                    </div>
+                </div>
+                <div class="row card-text">
+                    <div class="col-md-12">
+                        <span>Origin: <b>{{character.origin.name}}</b></span>
+                    </div>
+                </div>
+                <div class="row card-text">
+                    <div class="col-md-12">
+                        <span>Location: <b>{{character.location.name}}</b></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card -->
+    </div>
+</div>
